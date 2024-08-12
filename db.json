@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "id": "a01b",
+      "email": "sipheshment@gmail.com",
+      "password": "4567"
+    },
+    {
+      "id": "38ee",
+      "email": "sipheshment@gmail.com",
+      "password": "4567"
+    },
+    {
+      "id": "4119",
+      "email": "Siphelele.Zulu@jumpco.io",
+      "password": "Gm28zvgRSJsiD5H"
+    },
+    {
+      "id": "77b2",
+      "email": "Siphelele.Zulu@jumpco.io",
+      "password": "Gm28zvgRSJsiD5H"
+    },
+    {
+      "id": "2439",
+      "email": "Siphelele.Zulu@jumpco.io",
+      "password": "Gm28zvgRSJsiD5H"
+    },
+    {
+      "id": "5390",
+      "email": "Siphelele.Zulu@jumpco.io",
+      "password": "Gm28zvgRSJsiD5H"
+    },
+    {
+      "id": "fb16",
+      "email": "sipheshment@gmail.com",
+      "password": "4567"
+    },
+    {
+      "id": "8a4e",
+      "email": "sipheshment@gmail.com",
+      "password": "4567"
+    },
+    {
+      "id": "5853",
+      "email": "sipheshment@gmail.com",
+      "password": "4567"
+    },
+    {
+      "id": "f702",
+      "email": "sipheshment@gmail.com",
+      "password": "hgjh"
+    },
+    {
+      "id": "a23c",
+      "email": "sipheshment@gmail.com",
+      "password": "4567"
+    },
+    {
+      "id": "ba8a",
+      "name": "SipheleleZulu",
+      "username": "sipheshment@gmail.com",
+      "password": "4567"
+    },
+    {
+      "id": "8881",
+      "email": "sipheshment@gmail.com",
+      "password": "4567"
+    },
+    {
+      "id": "51df",
+      "name": "Asiphe",
+      "username": "asiphe@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "3419",
+      "name": "Xoli",
+      "username": "xolinxi@google.com",
+      "password": "123"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "1206",
+      "name": "dsfgfg",
+      "ingredients": "dfgdfg",
+      "instructions": "dfgdfg",
+      "category": "dfgdf",
+      "prepTime": "dfgdf",
+      "cookTime": "dgfdg",
+      "servings": "dfgfd"
+    }
+  ]
+}
