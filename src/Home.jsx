@@ -96,7 +96,7 @@ function Home() {
     <Box>
       <PrimarySearchAppBar/>
       <Carousel/>
-      <Typography variant="h4" gutterBottom>Recipe Manager</Typography>
+      {/* <Typography variant="h4" gutterBottom>Recipe Manager</Typography> */}
       <TextField
         label="Search Recipes"
         variant="outlined"
