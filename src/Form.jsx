@@ -609,7 +609,7 @@ function Form({ onRecipeUpdate }) {
 
   const handleSubmit = async () => {
     try {
-      await axios.post('http://localhost:3001/recipes', recipe);
+      await axios.post('http://localhost:3001/recipes', { ...recipe, isDefault: false });
       setRecipe({
         name: '',
         ingredients: '',
@@ -632,7 +632,7 @@ function Form({ onRecipeUpdate }) {
 
   return (
     <Container>
-      <Button variant="contained" color="primary" onClick={handleOpen} sx={{ fontSize: '2rem', fontWeight: '900', borderRadius: '50%', backgroundColor: 'orange', mr: 'auto' }}>
+      <Button variant="contained" color="primary" onClick={handleOpen} sx={{ fontSize: '2rem', fontWeight: '900', borderRadius: '50%', backgroundColor: 'orange', mb:'10px' }}>
         +
       </Button>
       <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth>

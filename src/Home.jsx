@@ -97,7 +97,7 @@ function Home() {
       <PrimarySearchAppBar/>
       <Carousel/>
       {/* <Typography variant="h4" gutterBottom>Recipe Manager</Typography> */}
-      <TextField
+      {/* <TextField
         label="Search Recipes"
         variant="outlined"
         fullWidth
@@ -105,7 +105,7 @@ function Home() {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <Button variant="contained" color="primary" onClick={handleSearch}>Search</Button>
+      <Button variant="contained" color="primary" onClick={handleSearch}>Search</Button> */}
       <RecipeForm onRecipeUpdate={handleRecipeUpdate} />
       <RecipeList recipes={recipes} onRecipeUpdate={handleRecipeUpdate} />
     </Box>
