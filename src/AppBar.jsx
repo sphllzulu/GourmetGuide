@@ -100,7 +100,7 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      {/* <MenuItem onClick={handleMenuClose}>Profile</MenuItem> */}
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
     </Menu>
   );
@@ -130,23 +130,12 @@ export default function PrimarySearchAppBar() {
           color="inherit"
         >
           
-            <LogoutIcon  />
+           <Link to="./login"><LogoutIcon  /></Link> 
           {/* </Badge> */}
         </IconButton>
         <p>Logout</p>
       </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
-      </MenuItem>
+      
     </Menu>
   );
 
@@ -167,7 +156,7 @@ export default function PrimarySearchAppBar() {
             variant="h6"
             noWrap
             component="div"
-            sx={{ display: { xs: 'none', sm: 'block' } }}
+            sx={{ display: {  sm: 'block' } }}
           >
             Gourmet Guide
           </Typography>
