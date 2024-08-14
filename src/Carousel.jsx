@@ -5,8 +5,8 @@ import { Box } from '@mui/material';
 
 const carouselImages = [
   'food.jpg',
-  'food.jpg',
-  'food.jpg',  
+  'caesar.jpg',
+  'ramen.jpg',  
 ];
 
 const Carousel = () => {
@@ -19,7 +19,7 @@ const Carousel = () => {
   };
 
   return (
-    <Box sx={{ width: '100%',height:'400px', overflow: 'hidden' }}>
+    <Box sx={{ width: '100%',height:'400px', overflow: 'hidden' }}  >
       <Slider {...settings}>
         {carouselImages.map((image, index) => (
           <div key={index}>

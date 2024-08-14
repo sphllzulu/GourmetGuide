@@ -57,7 +57,7 @@ import { Container, Button, TextField, Grid, Typography, Slider, Box } from '@mu
 import RecipeForm from './Form';
 import RecipeList from './List';
 import PrimarySearchAppBar from './AppBar';
-import SliderCarousel from './SliderCarousel';
+
 import Carousel from './Carousel';
 
 // import SwipeableTextMobileStepper from './SliderCarousel';

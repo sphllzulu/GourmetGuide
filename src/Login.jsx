@@ -1,46 +1,3 @@
-// import React, { useState } from 'react';
-// import { TextField, Button, Container, Typography,Box } from '@mui/material';
-// import axios from 'axios';
-
-// function Login() {
-//   const [email, setEmail] = useState('');
-//   const [password, setPassword] = useState('');
-
-//   const handleSubmit = async () => {
-//     try {
-//       const response = await axios.post('http://localhost:3001/users', { email, password });
-//       console.log('Logged in:', response.data);
-//     } catch (error) {
-//       console.error('Error logging in:', error);
-//     }
-//   };
-
-//   return (
-//     <Box sx={{margin: 'auto', width:'300px'}}>
-//       <Typography variant="h4" gutterBottom>Login</Typography>
-//       <TextField
-//         label="Email"
-//         variant="outlined"
-//         fullWidth
-//         margin="normal"
-//         value={email}
-//         onChange={(e) => setEmail(e.target.value)}
-//       />
-//       <TextField
-//         label="Password"
-//         type="password"
-//         variant="outlined"
-//         fullWidth
-//         margin="normal"
-//         value={password}
-//         onChange={(e) => setPassword(e.target.value)}
-//       />
-//       <Button variant="contained" color="primary" onClick={handleSubmit} sx={{backgroundColor:'teal'}}>Login</Button>
-//     </Box>
-//   );
-// }
-
-// export default Login;
 
 
 import React, { useState } from 'react';
@@ -87,6 +44,7 @@ function Login() {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 required
+                sx={{border:'2px solid orange', outline: 'none'}}
               />
             </Grid>
             <Grid item xs={12}>
@@ -98,6 +56,7 @@ function Login() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
+                sx={{border:'2px solid orange'}}
               />
             </Grid>
             {error && (
@@ -111,7 +70,7 @@ function Login() {
                 variant="contained"
                 color="primary"
                 fullWidth
-                sx={{ padding: 1.5, backgroundColor: 'teal' }}
+                sx={{ padding: 1.5, backgroundColor: 'orange' }}
               >
                 Login
               </Button>
@@ -132,3 +91,5 @@ function Login() {
 }
 
 export default Login;
+
+
