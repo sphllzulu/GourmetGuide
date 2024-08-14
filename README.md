@@ -56,10 +56,10 @@ Protect user data with proper authentication and authorization mechanisms.
    git clone https://github.com/sphllzulu/GourmetGuide.git
    
 
-   2. Start the application and the server:   
+   2. Install dependencies:   
    ```bash
    npm install 
 
-    3. Install the depencies:   
+    3. Start the application and the server:   
    ```bash
    npm start 
