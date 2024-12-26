@@ -1,0 +1,180 @@
+{
+    "users": [
+      {
+        "id": "5d43",
+        "name": "Siphelele Zulu",
+        "username": "sphllzulu@gmail.com",
+        "password": "456789"
+      },
+      {
+        "id": "f914",
+        "name": "lakhe",
+        "username": "lakhe@gmail.com",
+        "password": "Ntsw3mb4!2"
+      },
+      {
+        "id": "d745",
+        "name": "Siphesihle Zungu",
+        "username": "sihleZungu@gmail.com",
+        "password": "Ntsw3"
+      },
+      {
+        "id": "3f30",
+        "name": "Asiphe",
+        "username": "siphe@gmail.com",
+        "password": "12345"
+      },
+      {
+        "id": "5641",
+        "name": "Asiphe",
+        "username": "siphe@gmail.com",
+        "password": "12345"
+      }
+    ],
+    "recipes": [
+      {
+        "id": "1",
+        "name": "Macaroni",
+        "ingredients": "Mac & Cheese",
+        "instructions": "Toss ingredients together.",
+        "category": "Lunch",
+        "prepTime": "10 mins",
+        "cookTime": "0 mins",
+        "servings": "2",
+        "image": "./food.jpg",
+        "isDefault": true
+      },
+      {
+        "id": "2",
+        "name": "Spaghetti&Meatballs",
+        "ingredients": "Spaghetti, Meatballs,Sauce",
+        "instructions": "Toss ingredients together.",
+        "category": "Lunch",
+        "prepTime": "10 mins",
+        "cookTime": "0 mins",
+        "servings": "2",
+        "image": "./meatballs.jpg",
+        "isDefault": true
+      },
+      {
+        "id": "3",
+        "name": "Ramen Noodles",
+        "ingredients": "Spaghetti, Meatballs,Sauce",
+        "instructions": "Toss ingredients together.",
+        "category": "Lunch",
+        "prepTime": "10 mins",
+        "cookTime": "0 mins",
+        "servings": "2",
+        "image": "./ramen.jpg",
+        "isDefault": true
+      },
+      {
+        "id": "4",
+        "name": "Biryani",
+        "ingredients": "Chicken and Rice",
+        "instructions": "Toss ingredients together.",
+        "category": "Lunch",
+        "prepTime": "10 mins",
+        "cookTime": "0 mins",
+        "servings": "2",
+        "image": "./biryani2.jpg",
+        "isDefault": true
+      },
+      {
+        "id": "5",
+        "name": "Macaroni",
+        "ingredients": "Mac & Cheese",
+        "instructions": "Toss ingredients together.",
+        "category": "Lunch",
+        "prepTime": "10 mins",
+        "cookTime": "0 mins",
+        "servings": "2",
+        "image": "./food.jpg",
+        "isDefault": true
+      },
+      {
+        "id": "6",
+        "name": "Spaghetti&Meatballs",
+        "ingredients": "Spaghetti, Meatballs,Sauce",
+        "instructions": "Toss ingredients together.",
+        "category": "Lunch",
+        "prepTime": "10 mins",
+        "cookTime": "0 mins",
+        "servings": "2",
+        "image": "./meatballs.jpg",
+        "isDefault": true
+      },
+      {
+        "id": "7",
+        "name": "Ramen Noodles",
+        "ingredients": "Spaghetti, Meatballs,Sauce",
+        "instructions": "Toss ingredients together.",
+        "category": "Lunch",
+        "prepTime": "10 mins",
+        "cookTime": "0 mins",
+        "servings": "2",
+        "image": "./ramen.jpg",
+        "isDefault": true
+      },
+      {
+        "id": "8",
+        "name": "Caesar Salad",
+        "ingredients": "Lettuce, Croutons, Caesar dressing",
+        "instructions": "Toss ingredients together.",
+        "category": "Lunch",
+        "prepTime": "10 mins",
+        "cookTime": "0 mins",
+        "servings": "2",
+        "image": "./caesar.jpg",
+        "isDefault": true
+      },
+      {
+        "id": "9",
+        "name": "Biryani",
+        "ingredients": "Chicken and Rice",
+        "instructions": "Mix ingredients and cook on a griddle.",
+        "category": "Supper",
+        "prepTime": "10 mins",
+        "cookTime": "20 mins",
+        "servings": "4",
+        "image": "./biryani2.jpg",
+        "isDefault": true
+      },
+      {
+        "id": "10",
+        "name": "Caesar Salad",
+        "ingredients": "Lettuce, Croutons, Caesar dressing",
+        "instructions": "Toss ingredients together.",
+        "category": "Salad",
+        "prepTime": "10 mins",
+        "cookTime": "0 mins",
+        "servings": "2",
+        "image": "./caesar.jpg",
+        "isDefault": true
+      },
+      {
+        "id": "11",
+        "name": "Ramen Noodles",
+        "ingredients": "Noodles, Boiled Eggs",
+        "instructions": "Toss ingredients together.",
+        "category": "Lunch",
+        "prepTime": "10 mins",
+        "cookTime": "0 mins",
+        "servings": "2",
+        "image": "./ramen.jpg",
+        "isDefault": true
+      },
+      {
+        "id": "12",
+        "name": "Spaghetti&Meatballs",
+        "ingredients": "Spaghetti, Meatballs,Sauce",
+        "instructions": "Toss ingredients together.",
+        "category": "Lunch",
+        "prepTime": "10 mins",
+        "cookTime": "0 mins",
+        "servings": "2",
+        "image": "./meatballs.jpg",
+        "isDefault": true
+      }
+    ]
+  }

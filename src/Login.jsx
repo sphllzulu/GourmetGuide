@@ -1,8 +1,9 @@
 
 
 import React, { useState } from 'react';
-import { TextField, Button, Typography, Container, Grid, Paper, Link } from '@mui/material';
+import { TextField, Button, Typography, Container, Grid, Paper } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 function Login() {
@@ -78,9 +79,8 @@ function Login() {
             <Grid item xs={12} sx={{ textAlign: 'center', marginTop: 2 }}>
               <Typography variant="body2">
                 Don't have an account?{' '}
-                <Link href="/register" variant="body2">
-                  Register
-                </Link>
+                <Link to="/register">Register</Link>
+                
               </Typography>
             </Grid>
           </Grid>
