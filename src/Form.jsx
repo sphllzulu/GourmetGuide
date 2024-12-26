@@ -51,7 +51,7 @@ function Form({ onRecipeUpdate }) {
     formData.append('image', file);
 
     try {
-      const response = await axios.post('http://localhost:3001/upload', formData, {
+      const response = await axios.post('https://gourmetguide-2.onrender.com/upload', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       return response.data.fileUrl; // Adjust based on your API response
@@ -68,7 +68,7 @@ function Form({ onRecipeUpdate }) {
         imageUrl = await uploadImage(imageFile);
       }
 
-      await axios.post('http://localhost:3001/recipes', { ...recipe, image: imageUrl, isDefault: false });
+      await axios.post('https://gourmetguide-2.onrender.com/recipes', { ...recipe, image: imageUrl, isDefault: false });
       setRecipe({
         name: '',
         ingredients: '',

@@ -23,7 +23,7 @@ function Home() {
 
   const fetchRecipes = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/recipes');
+      const response = await axios.get('https://gourmetguide-2.onrender.com/recipes');
       setRecipes(response.data);
     } catch (error) {
       console.error('Error fetching recipes:', error);
@@ -32,7 +32,7 @@ function Home() {
 
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/recipes?q=${search}`);
+      const response = await axios.get(`https://gourmetguide-2.onrender.com/recipes?q=${search}`);
       setRecipes(response.data);
     } catch (error) {
       console.error('Error searching recipes:', error);

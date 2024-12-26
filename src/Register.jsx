@@ -15,7 +15,7 @@ function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3001/users', { name, username, password });
+      await axios.post('https://gourmetguide-2.onrender.com/users', { name, username, password });
       navigate('/login'); // Redirect to login page on successful registration
     } catch (error) {
       setError('Failed to register. Please try again.');

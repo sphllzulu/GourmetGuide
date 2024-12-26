@@ -89,7 +89,7 @@ function List({ recipes, onRecipeUpdate, currentUserId, onSearch }) {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3001/recipes/${id}`);
+      await axios.delete(`https://gourmetguide-2.onrender.com/recipes/${id}`);
       onRecipeUpdate();
     } catch (error) {
       console.error('Error deleting recipe:', error);
@@ -148,7 +148,7 @@ function List({ recipes, onRecipeUpdate, currentUserId, onSearch }) {
 
   const handleEditSubmit = async () => {
     try {
-      await axios.patch(`http://localhost:3001/recipes/${editRecipe.id}`, editRecipe);
+      await axios.patch(`https://gourmetguide-2.onrender.com/recipes/${editRecipe.id}`, editRecipe);
       setEditRecipe(null);
       setOpen(false);
       onRecipeUpdate(); 

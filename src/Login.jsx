@@ -15,7 +15,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get('http://localhost:3001/users', {
+      const response = await axios.get('https://gourmetguide-2.onrender.com/users', {
         params: { username, password },
       });
       
