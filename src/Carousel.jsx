@@ -11,7 +11,7 @@ const carouselImages = [
 
 const Carousel = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -19,7 +19,7 @@ const Carousel = () => {
   };
 
   return (
-    <Box sx={{ width: '100%',height:'400px', overflow: 'hidden' }}  >
+    <Box sx={{ width: '100%',height:'300px', overflow: 'hidden' }}  >
       <Slider {...settings}>
         {carouselImages.map((image, index) => (
           <div key={index}>
