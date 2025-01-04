@@ -1,7 +1,4 @@
-
-
-
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import axios from 'axios';
 import {
   TextField,
@@ -18,8 +15,13 @@ import {
   FormControl,
   InputLabel
 } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from './AuthContext';
 
 function Form({ onRecipeUpdate }) {
+  const { currentUser } = useAuth();
+  const navigate = useNavigate();
+
   const [recipe, setRecipe] = useState({
     name: '',
     ingredients: '',
@@ -33,6 +35,12 @@ function Form({ onRecipeUpdate }) {
 
   const [open, setOpen] = useState(false);
   const [imageFile, setImageFile] = useState(null);
+    
+  useEffect(() => {
+    if (!currentUser) {
+      navigate('/login');
+    }
+  }, [currentUser, navigate]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,33 +50,26 @@ function Form({ onRecipeUpdate }) {
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setImageFile(file);
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const imageBase64 = reader.result;
+        setRecipe({ ...recipe, image: imageBase64 });
+      };
+      reader.readAsDataURL(file);
     }
   };
 
-  const uploadImage = async (file) => {
-    const formData = new FormData();
-    formData.append('image', file);
-
-    try {
-      const response = await axios.post('https://gourmetguide-2.onrender.com/upload', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' },
-      });
-      return response.data.fileUrl; // Adjust based on your API response
-    } catch (error) {
-      console.error('Error uploading image:', error);
-      return null;
-    }
-  };
-
+  
   const handleSubmit = async () => {
     try {
-      let imageUrl = '';
-      if (imageFile) {
-        imageUrl = await uploadImage(imageFile);
-      }
+      // Directly use the base64 image string stored in recipe.image
+      await axios.post('https://gourmetguide-2.onrender.com/recipes', {
+        ...recipe,
+        userId: currentUser.id,
+        createdBy: currentUser.name,
+        isDefault: false
+      });
 
-      await axios.post('https://gourmetguide-2.onrender.com/recipes', { ...recipe, image: imageUrl, isDefault: false });
       setRecipe({
         name: '',
         ingredients: '',
@@ -80,12 +81,13 @@ function Form({ onRecipeUpdate }) {
         image: ''
       });
       setImageFile(null);
-      setOpen(false); // Close dialog
-      onRecipeUpdate(); // Notify parent to update recipe list
+      setOpen(false);
+      onRecipeUpdate();
     } catch (error) {
       console.error('Error adding recipe:', error);
     }
   };
+
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
