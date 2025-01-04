@@ -1,7 +1,3 @@
-
-
-
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Container, Button, TextField, Grid, Typography, Slider, Box } from '@mui/material';
@@ -47,16 +43,6 @@ function Home() {
     <Box>
       <PrimarySearchAppBar/>
       <Carousel/>
-      {/* <Typography variant="h4" gutterBottom>Recipe Manager</Typography> */}
-      {/* <TextField
-        label="Search Recipes"
-        variant="outlined"
-        fullWidth
-        margin="normal"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <Button variant="contained" color="primary" onClick={handleSearch}>Search</Button> */}
       <RecipeForm onRecipeUpdate={handleRecipeUpdate} />
       <RecipeList recipes={recipes} onRecipeUpdate={handleRecipeUpdate} />
     </Box>
