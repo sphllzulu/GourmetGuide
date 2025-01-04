@@ -1,6 +1,3 @@
-
-
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import {
@@ -21,6 +18,7 @@ import {
   InputLabel
 } from '@mui/material';
 import { styled } from '@mui/system';
+import { useAuth } from './AuthContext';
 
 // Styled components
 const StyledCard = styled(Card)(({ theme }) => ({
@@ -62,11 +60,42 @@ const StyledSelect = styled(Select)(({ theme }) => ({
 }));
 
 function List({ recipes, onRecipeUpdate, currentUserId, onSearch }) {
+  const { currentUser } = useAuth();
   const [editRecipe, setEditRecipe] = useState(null);
   const [open, setOpen] = useState(false);
   const [expandedRecipeId, setExpandedRecipeId] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState('');
   const [searchKeyword, setSearchKeyword] = useState('');
+
+
+    const renderActions = (recipe) => {
+    if (!currentUser) return null;
+    
+    // Check if the current user is the creator of the recipe
+    if (currentUser.id === recipe.userId) {
+      return (
+        <>
+          <Button
+            variant="contained"
+            color="secondary"
+            sx={{ backgroundColor: 'orange', mt: '10px', mr: '10px' }}
+            onClick={() => handleDelete(recipe.id)}
+          >
+            Delete
+          </Button>
+          <Button
+            variant="contained"
+            color="secondary"
+            sx={{ backgroundColor: 'orange', mt: '10px' }}
+            onClick={() => handleEditClick(recipe)}
+          >
+            Edit
+          </Button>
+        </>
+      );
+    }
+    return null;
+  };
 
   // Handles filtering by category and search keyword
   const filteredRecipes = recipes
@@ -205,6 +234,9 @@ function List({ recipes, onRecipeUpdate, currentUserId, onSearch }) {
             <StyledCard>
               <CardContent>
                 <Typography variant="h5">{recipe.name}</Typography>
+                <Typography variant="subtitle2" color="textSecondary">
+                  Created by: {recipe.createdBy || 'Default Recipe'}
+                </Typography>
                 <Typography variant="subtitle1">{recipe.category}</Typography>
                 {recipe.image && (
                   <RecipeImage src={recipe.image} alt="Recipe" />
@@ -225,26 +257,7 @@ function List({ recipes, onRecipeUpdate, currentUserId, onSearch }) {
                   {expandedRecipeId === recipe.id ? 'View Less' : 'View More'}
                 </Button>
                
-                {!recipe.isDefault && (
-                  <>
-                    <Button
-                      variant="contained"
-                      color="secondary"
-                      sx={{ backgroundColor: 'orange', mt: '10px', mr: '10px' }}
-                      onClick={() => handleDelete(recipe.id)}
-                    >
-                      Delete
-                    </Button>
-                    <Button
-                      variant="contained"
-                      color="secondary"
-                      sx={{ backgroundColor: 'orange', mt: '10px' }}
-                      onClick={() => handleEditClick(recipe)}
-                    >
-                      Edit
-                    </Button>
-                  </>
-                )}
+                {renderActions(recipe)}
               </CardContent>
             </StyledCard>
           </Grid>

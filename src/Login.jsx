@@ -5,22 +5,49 @@ import { TextField, Button, Typography, Container, Grid, Paper } from '@mui/mate
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { useAuth } from './AuthContext';
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const { login } = useAuth();
+
+  // const handleLogin = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await axios.get('https://gourmetguide-2.onrender.com/users', {
+  //       params: { username, password },
+  //     });
+      
+  //     if (response.data.length > 0) {
+  //       navigate('/'); // Redirect to home page on successful login
+  //     } else {
+  //       setError('Invalid username or password.');
+  //     }
+  //   } catch (error) {
+  //     setError('Failed to login. Please try again.');
+  //   }
+  // };
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
+      // Use your existing users endpoint
       const response = await axios.get('https://gourmetguide-2.onrender.com/users', {
         params: { username, password },
       });
       
       if (response.data.length > 0) {
-        navigate('/'); // Redirect to home page on successful login
+        const userData = response.data[0];
+        // Store the entire user object including id and name
+        login({
+          id: userData.id,
+          name: userData.name,
+          username: userData.username
+        });
+        navigate('/');
       } else {
         setError('Invalid username or password.');
       }
