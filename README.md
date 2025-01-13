@@ -14,6 +14,10 @@ This application allows users to store, manage, and refer to their favorite dish
   - **Add Function**: Add new recipes with details including Recipe Name, Ingredients, Instructions, Category, Preparation Time, Cooking Time, and Servings.
   - **Delete Function**: Remove existing recipes from the list.
   - **Update Function**: Edit existing recipes.
+ 
+## Screenshot
+![gourmet](https://github.com/user-attachments/assets/545a41a5-9b6c-46bf-ab52-138a8a2af9eb)
+
 
 ## Recipe Categories
 
